@@ -1,6 +1,6 @@
 {
   "name": "@rjweb/runtime-bun",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "rjweb-server runtime for bun",
   "module": "./lib/esm/index.js",
   "types": "./lib/typings/index.d.ts",
