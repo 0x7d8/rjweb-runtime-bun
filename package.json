@@ -1,0 +1,48 @@
+{
+  "name": "@rjweb/runtime-bun",
+  "version": "1.0.0",
+  "description": "rjweb-server runtime for bun",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/typings/index.d.ts",
+  "scripts": {
+    "build:full": "rm -rf lib && bun build src/index.ts --outdir lib/esm --target bun --minify --splitting && ttsc && mv lib/typings/src/* lib/typings && rm -fr lib/typings/src && echo \"Size $(du -sh lib)\"",
+    "run:test": "bun run test/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x7d8/NPM_WEB-SERVER.git"
+  },
+  "keywords": [
+    "webserver",
+    "web-server",
+    "lightweight",
+    "server",
+    "restful",
+    "rest",
+    "node",
+    "http",
+    "easy",
+    "api",
+    "web",
+    "backend"
+  ],
+  "author": "0x7d8 (0x4096 / Robert Jansen)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0x7d8/NPM_WEB-SERVER/issues"
+  },
+  "homepage": "https://github.com/0x7d8/NPM_WEB-SERVER#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "bun": "^1.0.2",
+    "bun-types": "^1.0.2",
+    "rjweb-server": "^9.0.0",
+    "ttsc": "^0.3.1",
+    "typedoc": "^0.24.4",
+    "typescript": "^5.2.2",
+    "typescript-transform-paths": "^3.4.6"
+  },
+  "dependencies": {
+    "@rjweb/utils": "^1.5.0"
+  }
+}
